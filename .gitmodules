@@ -1,0 +1,3 @@
+[submodule "http-twiddle"]
+	path = http-twiddle
+	url = git://github.com/skeptomai/http-twiddle.git
