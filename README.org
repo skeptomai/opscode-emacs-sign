@@ -22,6 +22,10 @@ TLS connection to the server.
 ** openssl
 We call out to the openssl command line tool to perform the
 cryptographic digest of the request components
+** starttls
+starttls is included in recent emacs.  Sorry, I don't know how far
+back.  Try 'M-x locate-library <RET> starttls <RET>' to verify you've
+got it.
 ** http-twiddle.el
 Requests are executed via 'http-twiddle' mode, originally written by
 Luke Gorrie.
@@ -37,8 +41,10 @@ Luke Gorrie.
 ;; Keywords: HTTP, REST, SOAP
 #END_SRC
 
-You'll need my (skeptomai <cb@opscode.com>) patched version, which is  available as a git submodule in this project repo.  
-** The actual cryptographic signing is done by the 'opscode-sign.el' code, included here
+You'll need my (skeptomai <cb@opscode.com>) patched version, which is
+available as a git submodule in this project repo.  The actual
+cryptographic signing is done by the 'opscode-sign.el' code, included
+here.
 
 * Installation
 
