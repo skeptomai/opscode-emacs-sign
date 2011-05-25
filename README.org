@@ -1,4 +1,4 @@
-Welcome to Opscode Emacs Request Signing
+* Welcome to Opscode Emacs Request Signing
 
 * Overview
 
@@ -47,6 +47,13 @@ cryptographic signing is done by the 'opscode-sign.el' code, included
 here.
 
 * Installation
+
+After git cloning this repo, be sure to 
+
+#BEGIN_SRC 
+git submodule init
+git submodule update
+#END_SRC
 
 Evaluating the files in the 'config' directory will configure both
 http-twiddle mode and opscode-sign.  Load them as you do your other
