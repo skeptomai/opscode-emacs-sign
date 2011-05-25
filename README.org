@@ -62,8 +62,7 @@ particular attention to the userid and location of the userpem file.
 * Try it out
 
 * About
- Version:  0.1
- Keywords: elisp, RSA, openssl, signature, opscode, chef
- Date:     2011-05-14
- Author:  Christopher Brown (skeptomai) <cb@opscode.com>
- Maintainer: Christopher Brown (skeptomai) <cb@opscode.com>
+** Version:  0.1
+** Keywords: elisp, RSA, openssl, signature, opscode, chef
+** Author:  Christopher Brown (skeptomai) <cb@opscode.com>
+** Maintainer: Christopher Brown (skeptomai) <cb@opscode.com>
