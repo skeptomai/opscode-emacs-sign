@@ -1,0 +1,56 @@
+Welcome to Opscode Emacs Request Signing
+
+* Overview
+
+Opscode makes Chef, a systems management framework, available in
+several flavors: Chef Solo, Open Source Chef Server, and Hosted Chef.
+
+The Open Source and Hosted flavors require strong (cryptographic)
+authentication to which Hosted Chef adds enterprise-grade
+authorization and role based access control.
+
+In this repo, you'll find all you need to create signed, secure API
+requests from Emacs and execute them against an Open Source Chef
+Server or Opscode Hosted Chef platform.
+
+
+* Requirements
+
+** gnutls
+We call out from Emacs via gnutls-cli to create and manage the actual
+TLS connection to the server.
+** openssl
+We call out to the openssl command line tool to perform the
+cryptographic digest of the request components
+** http-twiddle.el
+Requests are executed via 'http-twiddle' mode, originally written by
+Luke Gorrie.
+
+#BEGIN_SRC elisp
+;; Author: Luke Gorrie <luke@synap.se>
+;; Maintainer: Hasan Veldstra <h@vidiowiki.com>
+;; Created: 1 Feb 2006
+;; Adapted-By: Hasan Veldstra
+;; Adapted-By: Christopher Brown <cb@opscode.com>
+;; Version: 1.0
+;; URL: https://github.com/hassy/http-twiddle/blob/master/http-twiddle.el
+;; Keywords: HTTP, REST, SOAP
+#END_SRC
+
+You'll need my (skeptomai <cb@opscode.com>) patched version, which is  available as a git submodule in this project repo.  
+** The actual cryptographic signing is done by the 'opscode-sign.el' code, included here
+
+* Installation
+
+Evaluating the files in the 'config' directory will configure both
+http-twiddle mode and opscode-sign.  Load them as you do your other
+emacs config and make sure both http-twiddle.el and opscode-sign.el
+are in your emacs load path.
+
+'my-http-twiddle.el' autoloads http-twiddle mode and associates it
+with the file extension ".http-twiddle".  More information can be
+found in the 'http-twiddle.el' file.
+
+'my-opscode-sign.el' sets the variables required by opscode-sign.  Pay
+particular attention to the userid and location of the userpem file.
+* Try it out
