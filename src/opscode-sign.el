@@ -1,4 +1,4 @@
-;; opscode-sign.el -- Opscode API request signer
+;;; opscode-sign.el --- Opscode API request signer
 
 ;; Version:  0.1
 ;; Keywords: elisp, RSA, openssl, signature, opscode, chef
